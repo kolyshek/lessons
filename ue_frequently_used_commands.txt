@@ -1,0 +1,35 @@
+Macros:
+	UPROPERTY()
+	TEXT()
+Core:
+	FString
+	FVector
+		.X
+		.Y
+		.Z
+	FRotator
+		.Pitch
+		.Roll
+		.Yaw
+	FMath
+		::Sin()
+CoreUObject:
+	CreateDefaultSubobject<>()
+	ConstructorHelpers
+		::FObjectFinder<>
+			.Succeeded()
+			.Object
+Engine:
+	AActor
+		PrimaryActorTick
+			.bCanEverTick
+		RootComponent
+		.GetActorLocation()
+		.GetActorRotation()
+		.GetGameTimeSinceCreation()
+		.SetActorLocationAndRotation()
+	UStaticMeshComponent
+		.SetupAttachment()
+		.SetStaticMesh()
+		.SetRelativeLocation()
+	UCapsuleComponent

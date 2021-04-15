@@ -1,0 +1,233 @@
+sf::AlResource:
+sf::BlendMode:
+sf::CircleShape
+sf::Clipboard:
+sf::Clock:
+sf::Color:
+	.Color()
+	.Color()
+	.Color()
+	.toInteger()
+	operator!=()
+	operator*()
+	operator*=()
+	operator+()
+	operator+=()
+	operator-()
+	operator-=()
+	operator==()
+	.a
+	.b
+	::Black
+	::Blue
+	::Cyon
+	.g
+	::Green
+	::Magenta
+	.r
+	::Red
+	::Transparent
+	::White
+	::Yello
+sf::Context:
+sf::ContextSettings:
+sf::ConvexShape:
+sf::Cursor:
+sf::Drawable:
+sf::Event:
+sf::FileInputStream:
+sf::Font:
+sf::Ftp:
+sf::GlResource:
+sf::Glyph:
+sf::Http:
+sf::Image:
+sf::InputSoundFile:
+sf::InputStream:
+sf::IpAddress:
+sf::Joystick:
+sf::Keyboard:
+	::Key
+		::Unknown
+		::A
+		::B
+		::C
+		::D
+		::E
+		::F
+		::G
+		::H
+		::I
+		::G
+		::K
+		::L
+		::M
+		::N
+		::O
+		::P
+		::Q
+		::R
+		::S
+		::T
+		::U
+		::V
+		::W
+		::X
+		::Y
+		::Z
+		::Num0
+		::Num1
+		::Num2
+		::Num3
+		::Num4
+		::Num5
+		::Num6
+		::Num7
+		::Num8
+		::Num9
+		::Escape
+		::LControl
+		::LShift
+		::LAlt
+		::LSystem
+		::RControl
+		::RShift
+		::RAlt
+		::RSystem
+		::Menu
+		::LBracket
+		::RBracket
+		::SemiColon
+		::Comma
+		::Period
+		::Quote
+		::Slash
+		::BackSlash
+		::Tilde
+		::Equal
+		::Dash
+		::Space
+		::Return
+		::BackSpace
+		::Tab
+		::PageUp
+		::PageDown
+		::End
+		::Home
+		::Insert
+		::Delete
+		::Add
+		::Subtract
+		::Multiply
+		::Divide
+		::Left
+		::Right
+		::Up
+		::Down
+		::Numpad0
+		::Numpad1
+		::Numpad2
+		::Numpad3
+		::Numpad4
+		::Numpad5
+		::Numpad6
+		::Numpad7
+		::Numpad8
+		::Numpad9
+		::F1
+		::F2
+		::F3
+		::F4
+		::F5
+		::F6
+		::F7
+		::F8
+		::F9
+		::F10
+		::F11
+		::F12
+		::F13
+		::F14
+		::F15
+		::Pause
+		::KeyCount
+sf::Listener:
+sf::Lock:
+sf::MemoryInputStream:
+sf::Mouse:
+sf::Music:
+sf::Mutex:
+sf::NonCopyable:
+sf::OutputSoundFile:
+sf::Packet:
+sf::Rect:
+sf::RectangleShape:
+sf::RenderStates:
+sf::RenderTarget:
+sf::RenderTexture:
+sf::RenderWindow:
+sf::Sensor:
+sf::Shader:
+sf::Shape:
+sf::Socket:
+sf::SocketSelector:
+sf::Sound:
+sf::SoundBuffer:
+sf::SoundBufferRecorder:
+sf::SoundFileFactory:
+sf::SoundFileReader:
+sf::SoundFileWriter:
+sf::SoundRecorder:
+sf::SoundSource:
+sf::SoundStream:
+sf::Sprite:
+sf::String:
+sf::TcpListener:
+sf::TcpSocket:
+sf::Text:
+	::Style
+		::Regular
+		::Bold
+		::Italic
+		::Underlined
+		::StrikeThrough
+	.Text()
+	.Text()
+	.findCharacterPos()
+	.getCharacterSize()
+	.getColor()
+	.getFillColor()
+	.getFont()
+	.getGlobalBounds()
+	.getInverseTransform()
+	.getLocalBounds()
+	.getOrigin()
+	.getOutlineColor()
+	.get
+	.get
+	.get
+	.get
+	.get
+	.get
+	.get
+sf::Texture:
+sf::Thread:
+sf::ThreadLocal:
+sf::ThreadLocalPtr:
+sf::Time:
+sf::Touch:
+sf::Transform:
+sf::Transformable:
+sf::UdpSocket:
+sf::Utf:
+sf::Utf<16>:
+sf::Utf<32>:
+sf::Utf<8>:
+sf::Vector2:
+sf::Vector3:
+sf::Vertex:
+sf::VertexArray:
+sf::VertexBuffer:
+sf::VideoMode:
+sf::View:
+sf::Window:

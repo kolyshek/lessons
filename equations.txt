@@ -1,0 +1,1 @@
+float DeltaHeight = (sin(RunningTime + DeltaTime) - sin(RunningTime));

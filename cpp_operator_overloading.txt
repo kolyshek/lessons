@@ -1,0 +1,38 @@
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// operator int() const;
+// operator double() const;
+// operator bool() const;
+
+// friend bool operator==(const SomeClass& left, const SomeClass& right);
+// friend bool operator!=(const SomeClass& left, const SomeClass& right);
+// friend bool operator<(const SomeClass& left, const SomeClass& right);
+// friend bool operator<=(const SomeClass& left, const SomeClass& right);
+// friend bool operator>(const SomeClass& left, const SomeClass& right);
+// friend bool operator>=(const SomeClass& left, const SomeClass& right);
+// friend auto operator<=>(const SomeClass& left, const SomeClass& right);
+
+// SomeClass &operator=(const SomeClass& sc);
+// SomeClass &operator=(SomeClass&& sc);
+
+// SomeClass operator-() const;
+// friend SomeClass operator+(const SomeClass& left, const SomeClass& right);
+
+// SomeClass& operator+=(SomeClass sc);
+// SomeClass& operator/=(int value);
+
+// SomeClass& operator++()
+// SomeClass& operator++(int)
+// SomeClass& operator--()
+// SomeClass& operator--(int)
+
+// template <class T>
+// T &operator[](int index);
+
+// friend std::istream& operator>>(std::istream& in, SomeClass& sc);
+// friend std::ostream& operator<<(std::ostream& out, const SomeClass& sc);
+
+// template <class T>
+// T &operator*() const;
+// template <class T>
+// T *operator->() const;
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

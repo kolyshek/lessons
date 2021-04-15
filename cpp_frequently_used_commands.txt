@@ -1,0 +1,355 @@
+algorithm:
+	std::adjacent_find()-находит первые два соседних элемента, которые равны (или удовлетворяют заданному предикату)
+	std::all_of()-проверяет, верен ли предикат для всех, любого или ни одного из элементов в диапазоне
+	std::swap()-меняет местами значения двух объектов
+	std::sort()-сортирует диапазон в порядке возрастания
+	~~~~~~~~~~~~~~~~
+	std::find()   -|находит первый элемент, удовлетворяющий определенным критериям
+	std::find_if()-|
+	~~~~~~~~~~~~~~~~~
+	std::count()   -|возвращает количество элементов, удовлетворяющих определенным критериям
+	std::count_if()-|
+	~~~~~~~~~~~~~~~~~
+	std::for_each()-применяет функцию к диапазону элементов
+	std::copy()-копирует диапазон элементов в новое место
+	std::copy_backward()-копирует диапазон элементов в обратном порядке
+	std::move()-перемещает ряд элементов в новое место
+	std::move_backward()-перемещает диапазон элементов в новое место в обратном порядке
+	std::max_element()-возвращает самый большой элемент в диапазоне
+	std::min_element()-возвращает наименьший элемент в диапазоне
+	std::generate()-saves the result of a function in a range
+	std::max()-возвращает большее из заданных значений
+	std::min()-возвращает меньшее из заданных значений
+	std::reverse()-меняет порядок элементов в диапазоне
+array:
+	std::array
+		.at()-доступ к указанному элементу с проверкой границ
+		.begin()-возвращает итератор в начало
+		.end()-возвращает итератор до конца
+bitset:
+	std::bitset
+		.test()
+		.set()
+		.reset()
+		.flip()
+cassert:
+	assert()-прерывает выполнение программы, если указанное пользователем условие не выполняется. Может быть отключен для сборок выпуска
+cctype:
+	std::isalnum()
+	std::isalpha()
+	std::iscntrl()
+	std::isdigit()
+	std::isgraph()
+	std::isprint()
+	std::ispunct()
+	std::isspace()
+	std::isxdigit()
+chrono:
+	std::chrono
+		::high_resolution_clock
+			::now
+		::duration
+			.count()
+		::time_point
+		::duration_cast
+cmath:
+	std::pow()
+	std::abs()
+	std::fabs()
+	std::sqrt()
+	std::sin()
+	std::cos()
+	std::round()
+conio.h:
+	_kbhit()
+cstring:
+	strcpy_s()
+	strlen()
+	strcat()
+	strncat()
+	strcmp()
+	strncmp()
+	memcmp()
+cstdio:
+	std::remove()-стирает файл
+	std::rename()-переименовывает файл
+cstdlib:
+	exit()
+	srand()
+	rand()
+	system()
+cstdint:
+	~~~~~~~~~~~~~~
+	std::int8_t -|знаковый целочисленный тип с шириной ровно 8, 16, 32 и 64 бит соответственно
+	std::int16_t-|без битов заполнения и с использованием дополнения до 2 для отрицательных значений
+	std::int32_t-|(предоставляется только в том случае, если реализация напрямую поддерживает тип)
+	std::int64_t-|
+	~~~~~~~~~~~~~~
+cstddef:
+	std::nullptr_t
+cstdarg:
+	va_list
+	va_start()
+	va_arg()
+	va_copy()
+	va_end()
+ctime:
+	time()
+deque:
+	std::deque
+		.size()
+		.push_back()
+		.push_front()
+exception:
+	std::exception
+		.what()
+	std::terminate()
+forward_list:
+	std::forward_list
+fstream:
+	std::ifstream
+		.open()-открывает файл и связывает его с потоком
+		.close()-закрывает связанный файл
+		.seekg()-устанавливает индикатор позиции ввода
+		.seekp()-устанавливает индикатор положения выхода
+		.tellg()-возвращает индикатор позиции ввода
+		.tellp()-возвращает индикатор положения вывода
+		.get()-извлекает символы
+		.eof()-проверяет, достигнут ли конец файла
+		.is_open()-проверяет, есть ли у потока связанный файл
+	std::ofstream
+		.put()-вставляет символ
+		.open()-открывает файл и связывает его с потоком
+		.close()-закрывает связанный файл
+		.seekp()-устанавливает индикатор положения выхода
+		.tellp()-возвращает индикатор положения вывода
+		.eof()-проверяет, достигнут ли конец файла
+		.is_open()-проверяет, есть ли у потока связанный файл
+	std::fstream
+		.put()-вставляет символ
+		.open()-открывает файл и связывает его с потоком
+		.close()-закрывает связанный файл
+		.seekg()-устанавливает индикатор позиции ввода
+		.seekp()-устанавливает индикатор положения выхода
+		.tellg()-возвращает индикатор позиции ввода
+		.tellp()-возвращает индикатор положения вывода
+		.get()-извлекает символы
+		.eof()-проверяет, достигнут ли конец файла
+		.is_open()-проверяет, есть ли у потока связанный файл
+functional:
+	std::greater
+	std::function
+	std::ref
+	std::reference_wrapper
+initializer_list:
+	std::initializer_list
+		.size()
+		.begin()
+		.end()
+ios:
+	std::boolalpha
+	std::noboolalpha
+	std::oct
+	std::dec
+	std::hex
+	std::scientific
+	std::showpos
+	std::noshowpos
+	std::uppercase
+	std::nouppercase
+	std::fixed
+	std::scientific
+	std::showpoint
+	std::noshowpoint
+	std::internal
+	std::left
+	std::right
+	::app
+	::ate
+	::binary
+	::in
+	::out
+	::trunc
+	::beg
+	::cur
+	::end
+iostream:
+	std::cout
+		.setf()
+		.unsetf()
+		.precision()
+		.fill()
+		.width()
+		.flush()
+	std::cin
+		.clear()
+		.ignore()
+		.get()
+		.fail()
+		.getline()
+		.gcount()
+		.ignore()
+		.peek()
+		.unget()
+		.putback()
+		.good()
+		.bad()
+		.eof()
+		.fail()
+		.rdstate()
+		.setstate()
+	std::cerr
+	std::clog
+iomanip:
+	std::setprecision()
+	std::setw()
+	std::setfill()
+istream:
+	std::istream
+		peek()
+iterator:
+	std::next()
+	std::size()
+	std::begin()
+	std::end()
+	std::distance()-возвращает расстояние между двумя итераторами
+list:
+	std::list
+		.begin()
+		.end()
+		.push_back()
+		.insert()
+		::const_iterator
+map:
+	std::map
+		.begin()
+		.end()
+		.insert()
+		.try_emplace()-вставляет на месте, если ключ не существует, ничего не делает, если ключ существует
+		::const_iterator
+	std::multimap
+memory:
+	std::scoped_ptr
+	std::unique_ptr
+		.get()
+	std::weak_ptr
+		.lock()
+	std::shared_ptr
+		.get()
+	std::make_unique()
+	std::make_shared()
+new:
+	std::nothrow
+	std::bad_alloc
+ostream:
+	std::endl
+	std::flush
+queue:
+	std::queue
+	std::priority_queue
+random:
+	std::random_device
+	std::mt19937
+	std::mt19937_64
+ratio:
+	std::ratio
+set:
+	std::set
+		.begin()
+		.end()
+		.insert()
+		::const_iterator
+	std::multiset
+sstream:
+	std::stringstream
+		.str()
+		.clear()
+	std::ostringstream
+		.str()
+	std::istringstream
+stack:
+	std::stack
+		top()
+		pop()
+		push()
+stdexcept:
+	std::runtime_error
+		.what()
+string_view:
+	std::string_view
+		.length()
+		.substr()
+		.find()
+		.starts_with()
+		.ends_with()
+		.remove_prefix()
+		.remove_suffix()
+		.data()
+		::npos
+string:
+	std::string
+		.begin()
+		.end()
+		.size()
+		.length()
+		.capacity()
+		.append()
+		.insert()
+		.reserve()
+		.swap()
+		.max_size()
+		.at()
+		.assign()
+		.empty()
+		.c_str()
+		.copy()
+		.data()
+	std::wstring
+		.begin()
+		.end()
+		.size()
+		.length()
+		.capacity()
+		.append()
+		.insert()
+		.reserve()
+		.swap()
+		.max_size()
+		.at()
+		.assign()
+		.empty()
+		.c_str()
+		.copy()
+		.data()
+	std::getline()
+	std::basic_string
+	std::stoi()-преобразует строку в целое число со знаком
+	std::to_string()-преобразует целое значение или значение с плавающей запятой в строку
+typeinfo:
+	typeid()
+		.name()
+	std::bad_cast
+utility:
+	std::move()
+	std::move_if_noexcept()
+	std::pair
+	std::make_pair
+vector:
+	std::vector
+		.size()
+		.begin()
+		.end()
+		.erase()
+		.resize()
+		.capacity()
+		.at()
+		.push_back()
+		.back()
+		.pop_back()
+		.reserve()
+		::size_type
+		::const_iterator
+	~~~~~~~~~~~~~~~
+	std::erase   -|Удаляет все элементы, удовлетворяющие определенным критериям
+	std::erase_if-|
+	~~~~~~~~~~~~~~~
