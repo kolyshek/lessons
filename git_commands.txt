@@ -1,11 +1,9 @@
 git init
-git status
-git add
 git add -A
-git commit
-git commit -m "comment here"
+git status
 git log
+git commit -m "comment here"
+git push -u origin master
 git checkout "hash here"
 git branch -M master
-git push -u origin master
-git reset --mixed origin/master
+git reset --hard HEAD~1
