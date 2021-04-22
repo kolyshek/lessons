@@ -23,8 +23,8 @@ Core:
 			.Z
 		FRotator
 			.Pitch
-			.Roll
 			.Yaw
+			.Roll
 		FMath
 			::Sin()
 	Interface(I):
@@ -101,6 +101,17 @@ Engine:
 			.GetGameTimeSinceCreation()
 			.SetActorLocationAndRotation()
 		APlayerController
+		ACharacter
+			Variables:
+				JumpMaxHoldTime - Максимальное время, в течение которого можно удерживать клавишу перехода.
+			Methods:
+				.Jump()
+				.StopJumping()
+		APawn
+			Variables:
+				bUseControllerRotationPitch - Если true, шаг этой пешки будет обновлен, чтобы соответствовать шагу ControlRotation контроллера, если он контролируется PlayerController.
+				bUseControllerRotationYaw - Если true, рыскание этой пешки будет обновлено, чтобы соответствовать рысканью ControlRotation контроллера, если он управляется PlayerController.
+				bUseControllerRotationRoll - Если true, результат этой пешки будет обновлен, чтобы соответствовать броску ControlRotation контроллера, если он контролируется PlayerController.
 	Enums(E):
 	Other(F):
 	Interface(I):
@@ -115,3 +126,21 @@ Engine:
 		UWorld
 			.GetWorld()
 			.SpawnActor()
+		UCharacterMovementComponent
+			Variables:
+				AirControl - При падении персонаж может контролировать боковое движение.
+				bOrientRotationToMovement - Если true, поверните Персонаж в направлении ускорения, используя RotationRate в качестве изменения скорости вращения.
+				bConstrainToPlane
+				bUseFlatBaseForFloorChecks
+				GravityScale - Пользовательская шкала силы тяжести. На эту величину умножается гравитация персонажа.
+				GroundFriction - Настройка, влияющая на управление движением.
+				JumpZVelocity - Начальная скорость (мгновенное вертикальное ускорение) при прыжке.
+				MaxWalkSpeed - Максимальная путевая скорость при ходьбе. Также определяет максимальную боковую скорость при падении.
+				MaxFlySpeed
+				RotationRate - Изменение скорости вращения в секунду, используется, когда UseControllerDesiredRotation или OrientRotationToMovement имеют значение true.
+			Methods:
+				.SetPlaneConstraintNormal()
+		UInputComponent
+			Methods:
+				.BindAction()
+				.BindTouch()
