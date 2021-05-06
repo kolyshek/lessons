@@ -80,10 +80,9 @@ CoreUObject:
 			.GetName()
 	CreateDefaultSubobject<>()
 	ConstructorHelpers
-		Other(F):
-			::FObjectFinder<>
-				.Succeeded()
-				.Object
+		::FObjectFinder<>
+			.Succeeded()
+			.Object
 	NewObject<>()
 Engine:
 	Actor(A):
@@ -144,3 +143,24 @@ Engine:
 			Methods:
 				.BindAction()
 				.BindTouch()
+Paper2D:
+	Actor(A):
+	Enums(E):
+	Other(F):
+	Interface(I):
+	SWidget(S):
+	Template(T):
+	Object(U):
+		UPaperFlipbook
+UMG:
+	Actor(A):
+	Enums(E):
+	Other(F):
+	Interface(I):
+	SWidget(S):
+	Template(T):
+	Object(U):
+		UTextBlock
+		UButton
+		UUserWidget
+		UImage
