@@ -14,48 +14,59 @@ Core:
 	Enums(E):
 	Other(F):
 		FString
-			.Printf()
+			Functions:
+				.Printf()
 		FText
 		FName
 		FVector
-			.X
-			.Y
-			.Z
+			Variables:
+				.X
+				.Y
+				.Z
+			Functions:
+				.SizeSquared()
 		FRotator
-			.Pitch
-			.Yaw
-			.Roll
+			Variables:
+				.Pitch
+				.Yaw
+				.Roll
 		FMath
-			::Sin()
+			Functions:
+				.Sin()
 	Interface(I):
 	SWidget(S):
 	Template(T):
 		TChar
-			.ToLower()
+			Functions:
+				.ToLower()
 		TCHAR
 		TArray
-			.Num()
-			.Add()
-			.AddUnique()
-			.Remove()
-			.RemoveAt()
-			.RemoveAtSwap()
-			.Empty()
+			Functions:
+				.Num()
+				.Add()
+				.AddUnique()
+				.Remove()
+				.RemoveAt()
+				.RemoveAtSwap()
+				.Empty()
 		TMap
-			.Key
-			.Value
-			.Contains()
-			.Add()
-			.Remove()
-			.Empty()
+			Variables:
+				.Key
+				.Value
+			Functions:
+				.Contains()
+				.Add()
+				.Remove()
+				.Empty()
 		TSet
-			.Num()
-			.Add()
-			.Contains()
-			.Remove()
-			.Empty()
-			.Array()
-			.CreateIterator()
+			Functions:
+				.Num()
+				.Add()
+				.Contains()
+				.Remove()
+				.Empty()
+				.Array()
+				.CreateIterator()
 	Object(U):
 		UStructs
 	int8/uint8
@@ -69,7 +80,8 @@ CoreUObject:
 	Enums(E):
 	Other(F):
 		FReferenceCollector
-			.AddReferencedObject()
+			Functions:
+				.AddReferencedObject()
 		FGCObject
 	Interface(I):
 	SWidget(S):
@@ -77,72 +89,113 @@ CoreUObject:
 		TObjectIterator<>
 	Object(U):
 		UObjectBaseUtility
-			.GetName()
+			Functions:
+				.GetName()
 	CreateDefaultSubobject<>()
 	ConstructorHelpers
 		::FObjectFinder<>
-			.Succeeded()
-			.Object
+			Variables:
+				.Object
+			Functions:
+				.Succeeded()
 	NewObject<>()
+	LoadObject<>()
 Engine:
 	Actor(A):
 		AActor
-			PrimaryActorTick
-				.bCanEverTick
-			RootComponent
-			.BeginPlay()
-			.Tick()
-			.EndPlay()
-			.PostInitProperties()
-			.PostEditChangeProperty()
-			.GetActorLocation()
-			.GetActorRotation()
-			.GetGameTimeSinceCreation()
-			.SetActorLocationAndRotation()
+			Variables:
+				.RootComponent
+			Functions:
+				.BeginPlay()
+				.Tick()
+				.EndPlay()
+				.PostInitProperties()
+				.PostEditChangeProperty()
+				.GetActorLocation()
+				.GetActorRotation()
+				.GetGameTimeSinceCreation()
+				.SetActorLocationAndRotation()
+				.GetVelocity()
+			Classes:
+				PrimaryActorTick
+					Variables:
+						.bCanEverTick
 		APlayerController
 		ACharacter
 			Variables:
-				JumpMaxHoldTime - Максимальное время, в течение которого можно удерживать клавишу перехода.
-			Methods:
+				.JumpMaxHoldTime
+			Functions:
+				.GetCapsuleComponent()
 				.Jump()
 				.StopJumping()
 		APawn
 			Variables:
-				bUseControllerRotationPitch - Если true, шаг этой пешки будет обновлен, чтобы соответствовать шагу ControlRotation контроллера, если он контролируется PlayerController.
-				bUseControllerRotationYaw - Если true, рыскание этой пешки будет обновлено, чтобы соответствовать рысканью ControlRotation контроллера, если он управляется PlayerController.
-				bUseControllerRotationRoll - Если true, результат этой пешки будет обновлен, чтобы соответствовать броску ControlRotation контроллера, если он контролируется PlayerController.
+				.bUseControllerRotationPitch
+				.bUseControllerRotationYaw
+				.bUseControllerRotationRoll
 	Enums(E):
+		ECameraProjectionMode
+			::Type
+				::Perspective
+				::Orthographic
 	Other(F):
 	Interface(I):
 	SWidget(S):
 	Template(T):
 	Object(U):
 		UStaticMeshComponent
-			.SetupAttachment()
-			.SetStaticMesh()
-			.SetRelativeLocation()
+			Functions:
+				.SetupAttachment()
+				.SetStaticMesh()
+				.SetRelativeLocation()
 		UCapsuleComponent
+			Functions:
+				.SetCapsuleSize()
+				.SetCapsuleRadius()
+				.SetCapsuleHalfHeight()
 		UWorld
-			.GetWorld()
-			.SpawnActor()
+			Functions:
+				.GetWorld()
+				.SpawnActor()
 		UCharacterMovementComponent
 			Variables:
-				AirControl - При падении персонаж может контролировать боковое движение.
-				bOrientRotationToMovement - Если true, поверните Персонаж в направлении ускорения, используя RotationRate в качестве изменения скорости вращения.
-				bConstrainToPlane
-				bUseFlatBaseForFloorChecks
-				GravityScale - Пользовательская шкала силы тяжести. На эту величину умножается гравитация персонажа.
-				GroundFriction - Настройка, влияющая на управление движением.
-				JumpZVelocity - Начальная скорость (мгновенное вертикальное ускорение) при прыжке.
-				MaxWalkSpeed - Максимальная путевая скорость при ходьбе. Также определяет максимальную боковую скорость при падении.
-				MaxFlySpeed
-				RotationRate - Изменение скорости вращения в секунду, используется, когда UseControllerDesiredRotation или OrientRotationToMovement имеют значение true.
-			Methods:
+				.AirControl
+				.bOrientRotationToMovement
+				.bConstrainToPlane
+				.bUseFlatBaseForFloorChecks
+				.GravityScale
+				.GroundFriction
+				.JumpZVelocity
+				.MaxWalkSpeed
+				.MaxFlySpeed
+				.RotationRate
+			Functions:
 				.SetPlaneConstraintNormal()
 		UInputComponent
-			Methods:
+			Functions:
 				.BindAction()
 				.BindTouch()
+		USceneComponent
+			Functions:
+				.SetupAttachment()
+				.SetRelativeRotation()
+				.SetUsingAbsoluteRotation()
+		USpringArmComponent
+			Variables:
+				.TargetArmLength
+				.bDoCollisionTest
+				.SocketOffset
+				.bEnableCameraLag
+				.CameraLagSpeed
+				.bDrawDebugLagMarkers
+		UCameraComponent
+			Variables:
+				.ProjectionMode
+				.OrthoWidth
+				.bUsePawnControlRotation
+		UActorComponent
+			Variables:
+				.bAutoActivate
 Paper2D:
 	Actor(A):
 	Enums(E):
@@ -161,6 +214,23 @@ UMG:
 	Template(T):
 	Object(U):
 		UTextBlock
+			Functions:
+				.SetText()
 		UButton
+			Variables:
+				.WidgetStyle
 		UUserWidget
 		UImage
+SlateCore:
+	Actor(A):
+	Enums(E):
+	Other(F):
+		FButtonStyle
+			Variables:
+				.Normal
+				.Hovered
+				.Pressed
+	Interface(I):
+	SWidget(S):
+	Template(T):
+	Object(U):
