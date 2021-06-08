@@ -93,7 +93,7 @@ CoreUObject:
 				.GetName()
 	CreateDefaultSubobject<>()
 	ConstructorHelpers
-		::FObjectFinder<>
+		::FObjectFinder<>()
 			Variables:
 				.Object
 			Functions:
