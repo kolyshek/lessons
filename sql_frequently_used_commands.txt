@@ -1,0 +1,73 @@
+commands:
+	CREATE DATABASE [database name]; - Создание базы данных
+	DROP DATABASE [databse name]; - Удаление базы данных
+	CREATE TABLE [table name] ( [column name] + [data type] + [constraints (if any)] ); - Создание таблицы
+	INSERT INTO [table name] (colymn names) VALUES (colymn values); - Заполнение таблицы
+	SELECT * FROM [table nama]; - Вывод таблицы
+	SELECT FROM [table nama]; - Вывод количества строк таблицы
+	SELECT [colomn name] FROM [table name]; - Вывод конкретной колонки таблицы
+	SELECT * FROM [table name] ORDER BY [colomn name] ASC/DESC; - Выводит сортированную таблицу в порядке возрастания/убывания по выбранной колонке
+	SELECT DISTINCT [colomn name] FROM [table name] ORDER BY [colomn name] ASC/DESC; - Выводит сортированную таблицу в порядке возрастания/убывания по выбранной колонке, исключая повторы
+	SELECT * FROM [table name] WHERE [colomn name] = ['value']; - Выводит строку таблицы если условие верно
+	SELECT * FROM [table name] WHERE [colomn name] = ['value'] AND [colomn name] = ['value']; - Выводит строку таблицы если оба условия верны
+	SELECT * FROM [table name] OFFSET [integer value] LIMIT [integer value]; - Выводит строки таблицы в заданном диапозоне
+	SELECT * FROM [table name] WHERE [colomn name] IN [('values')];
+	SELECT * FROM [table name] WHERE [colomn name] BETWEEN ['value'] AND ['value'];
+	SELECT * FROM [table name] WHERE [colomn name] LIKE ['%value'];
+	SELECT [colomn name], COUNT(*) FROM [table name] GROUP BY [colomn name];
+	SELECT [colomn name], COUNT(*) FROM [table name] GROUP BY [colomn name] HAVING COUNT(*) > [integer value];
+	SELECT [colomn name], [current colomn name] AS [new colomn name];
+	SELECT COALESCE([colomn name], ['value']) FROM [table name];
+	SELECT NOW(); - Текущие дата и время
+	SELECT NOW() +/- INTERVAL ['value' + YEAR/DAY/MONTH];
+	ALTER TABLE [table name] DROP CONSTRAINT [pkey name]; - Удаление уникального ограничителя на повторения в таблице
+	ALTER TABLE [table name] ADD PRIMARY KEY([colomn name]); - Добавдение уникального ограничителя на повторения в таблице
+restrictions:
+	NOT NULL - Обязательно для заполнения
+	PRIMARY KEY - Первичный ключ
+data_tipes:
+	INT
+	BIGSERIAL
+	VARCHAR
+	DATE
+	NUMERIC
+keywords:
+	CREATE DATABASE - Создаёт новую базу данных SQL
+	DROP DATABASE - Удаляет существующую базу данных SQL
+	CREATE TABLE - Создаёт новую таблицу в базе данных
+	INSERT INTO - Вставляет новые строки в таблицу
+	SELECT - Выбирает данные из базы данных
+	FROM - Определяет, из какой таблицы выбрать или удалить данные
+	NOT NULL - Ограничение, которое заставляет столбец не принимать значения NULL
+	NOT - Включает только строки, где условие не выполняется
+	ORDER BY - Сортирует набор результатов в порядке возрастания или убывания
+	ASC - Сортирует набор результатов в порядке возрастания
+	DESC - Сортирует набор результатов в порядке убывания
+	SELECT DISTINCT - Выбирает только отдельные (разные) значения
+	AND - Включает только строки в которых выполняются оба условия
+	OR - Включает строки в которых выполняется одно из условий
+	LIMIT - Задаёт количество записей, возвращаемых в результирующем наборе
+	OFFSET
+	FETCH
+	ORDER BY
+	DISTINCT
+	WHERE
+	IN
+	BETWEEN
+	LIKE
+	iLIKE
+	GROUP BY
+	HAVING
+	ALIAS
+	ALTER TABLE - Добавляет, удаляет или заменяет столбцы в таблице
+functions:
+	COUNT()
+	COALESCE()
+	MIN()
+	MAX()
+	AVG()
+	ROUND()
+	SUM()
+	NOW()
+	EXTRACT()
+	AGE()

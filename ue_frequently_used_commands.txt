@@ -3,12 +3,21 @@ Macros:
 	USTRUCT()
 	GENERATED_BODY()
 	UPROPERTY()
+		Specifiers:
+			EditAnywhere
+			EditDefaultsOnly
+			EditInstanceOnly
+			VisibleAnywhere
+			VisibleDefaultsOnly
+			VisibleInstanceOnly
 	UFUNCTION()
 	TEXT()
 	UE_LOG()
 	LOCTEXT()
 	NSLOCTEXT()
 	WITH_EDITOR
+	DEFINE_LOG_CATEGORY_STATIC()
+	DECLARE_DELEGATE()
 Core:
 	Actor(A):
 	Enums(E):
@@ -16,6 +25,8 @@ Core:
 		FString
 			Functions:
 				.Printf()
+				.FromInt()
+				.SanitizeFloat()
 		FText
 		FName
 		FVector
@@ -25,14 +36,26 @@ Core:
 				.Z
 			Functions:
 				.SizeSquared()
+				.ToString()
 		FRotator
 			Variables:
 				.Pitch
 				.Yaw
 				.Roll
+			Functions:
+				.ToString()
 		FMath
 			Functions:
 				.Sin()
+				.RandBool()
+		FTransform
+			Functions:
+				.ToString()
+				.ToHumanReadableString()
+		FLinearColor
+			Functions:
+				.MakeRandomColor()
+				.ToString()
 	Interface(I):
 	SWidget(S):
 	Template(T):
@@ -87,6 +110,7 @@ CoreUObject:
 	SWidget(S):
 	Template(T):
 		TObjectIterator<>
+		TSubclassOf<>
 	Object(U):
 		UObjectBaseUtility
 			Functions:
@@ -113,13 +137,20 @@ Engine:
 				.PostEditChangeProperty()
 				.GetActorLocation()
 				.GetActorRotation()
+				.GetActorTransform()
 				.GetGameTimeSinceCreation()
 				.SetActorLocationAndRotation()
 				.GetVelocity()
+				.SetRootComponent()
+				.GetWorldTimerManager()
+				.FinishSpawning()
 			Classes:
 				PrimaryActorTick
 					Variables:
 						.bCanEverTick
+		AController
+			Functions:
+				.Possess()
 		APlayerController
 		ACharacter
 			Variables:
@@ -133,12 +164,20 @@ Engine:
 				.bUseControllerRotationPitch
 				.bUseControllerRotationYaw
 				.bUseControllerRotationRoll
+			Functions:
+				.PossessedBy()
+				.UnPossessed()
 	Enums(E):
 		ECameraProjectionMode
 			::Type
 				::Perspective
 				::Orthographic
 	Other(F):
+		FTimerHandle
+		FTimerManager
+			Functions:
+				.SetTimer()
+				.ClearTimer()
 	Interface(I):
 	SWidget(S):
 	Template(T):
@@ -157,6 +196,8 @@ Engine:
 			Functions:
 				.GetWorld()
 				.SpawnActor()
+				.SpawnActorDeferred()
+				.GetTimeSeconds()
 		UCharacterMovementComponent
 			Variables:
 				.AirControl
@@ -196,6 +237,18 @@ Engine:
 		UActorComponent
 			Variables:
 				.bAutoActivate
+		UEngine
+			Functions:
+				.AddOnScreenDebugMessage()
+		UPrimitiveComponent
+			Functions:
+				.CreateAndSetMaterialInstanceDynamic()
+		UMaterialInstanceDynamic
+			Functions:
+				.SetVectorParameterValue()
+		UGameplayStatics
+			Functions:
+				.GetAllActorsOfClass()
 Paper2D:
 	Actor(A):
 	Enums(E):
