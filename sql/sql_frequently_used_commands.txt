@@ -2,7 +2,7 @@ commands:
 	CREATE DATABASE [database name]; - Создание базы данных
 	DROP DATABASE [databse name]; - Удаление базы данных
 	CREATE TABLE [table name] ( [column name] + [data type] + [constraints (if any)] ); - Создание таблицы
-	INSERT INTO [table name] (colymn names) VALUES (colymn values); - Заполнение таблицы
+	INSERT INTO [table name] [(colymn names)] VALUES [(colymn values)]; - Заполнение таблицы
 	SELECT * FROM [table nama]; - Вывод таблицы
 	SELECT FROM [table nama]; - Вывод количества строк таблицы
 	SELECT [colomn name] FROM [table name]; - Вывод конкретной колонки таблицы
@@ -22,15 +22,19 @@ commands:
 	SELECT NOW() +/- INTERVAL ['value' + YEAR/DAY/MONTH];
 	ALTER TABLE [table name] DROP CONSTRAINT [pkey name]; - Удаление уникального ограничителя на повторения в таблице
 	ALTER TABLE [table name] ADD PRIMARY KEY([colomn name]); - Добавдение уникального ограничителя на повторения в таблице
+	ALTER TABLE [table name] ADD [colomn name] BIGINT REFERENCES [table name] [([colomn name])]; - Добавление внешнего ключа
+	SELECT * FROM pg_available_extentions; - Вывод всех доступных расширений для postgres
 restrictions:
 	NOT NULL - Обязательно для заполнения
 	PRIMARY KEY - Первичный ключ
 data_tipes:
-	INT
+	INTEGER
 	BIGSERIAL
+	BIGINT
 	VARCHAR
 	DATE
 	NUMERIC
+	UUID
 keywords:
 	CREATE DATABASE - Создаёт новую базу данных SQL
 	DROP DATABASE - Удаляет существующую базу данных SQL
@@ -60,6 +64,16 @@ keywords:
 	HAVING
 	ALIAS
 	ALTER TABLE - Добавляет, удаляет или заменяет столбцы в таблице
+	ADD CONSTRAINT
+	UNIQUE
+	DELETE
+	CHECK
+	UPDATE
+	INNER JOIN
+	LEFT JOIN
+	RIGHT JOIN
+	OUTER JOIN
+	JOIN
 functions:
 	COUNT()
 	COALESCE()
