@@ -85,3 +85,5 @@ functions:
 	NOW()
 	EXTRACT()
 	AGE()
+	TIMESTAMPDIFF()
+	TIMEDIFF()
